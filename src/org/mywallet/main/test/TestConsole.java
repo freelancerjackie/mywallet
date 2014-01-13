@@ -1,4 +1,4 @@
-package org.mywallet.main.client;
+package org.mywallet.main.test;
 
 import org.mywallet.main.data.beans.Income;
 import org.mywallet.main.service.TransactionServiceImpl;
