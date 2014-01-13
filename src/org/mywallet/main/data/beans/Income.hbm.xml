@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2013 12:14:16 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <subclass name="org.mywallet.main.data.beans.Income" extends="org.mywallet.main.data.beans.Transaction" discriminator-value="Income" lazy="false">
+        <property name="id" type="java.lang.Long" insert="false" update="false">
+            <column name="ID" />
+        </property>
+    </subclass>
+</hibernate-mapping>
