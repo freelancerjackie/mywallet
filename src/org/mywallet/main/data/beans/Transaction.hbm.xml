@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2013 12:14:16 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.mywallet.main.data.beans.Transaction" table="TRANSACTION" abstract="true">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <discriminator type="string">
+            <column name="DISCR_COL" />
+        </discriminator>
+        <property name="transactionDate" type="java.util.Date">
+            <column name="TRANSACTIONDATE" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="category" type="int">
+            <column name="CATEGORY" />
+        </property>
+        <property name="amount" type="double">
+            <column name="AMOUNT" />
+        </property>
+        <property name="isRecurring" type="boolean" access="field">
+            <column name="ISRECURRING" />
+        </property>
+        <property name="type" type="int">
+            <column name="TYPE" />
+        </property>
+    </class>
+</hibernate-mapping>
